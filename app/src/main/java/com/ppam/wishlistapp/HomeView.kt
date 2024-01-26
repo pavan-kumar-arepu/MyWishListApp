@@ -31,7 +31,7 @@ fun HomeView() {
     val context = LocalContext.current
     Scaffold(
         topBar = { AppBarView("WishList", {
-            Toast.makeText(context, "Back Button Clicked", Toast.LENGTH_SHORT).show()
+//            Toast.makeText(context, "Back Button Clicked", Toast.LENGTH_SHORT).show()
         })},
         floatingActionButton = {
             FloatingActionButton(
@@ -39,7 +39,7 @@ fun HomeView() {
                 contentColor = Color.White,
                 backgroundColor = Color.Black,
                 onClick = { // TODO Add Navigation to Add WishList to the Screen }) {
-
+                    Toast.makeText(context, "It will open WishList Editor", Toast.LENGTH_SHORT).show()
                 }) {
                 Icon(imageVector = Icons.Default.Add, contentDescription = null)
             }
