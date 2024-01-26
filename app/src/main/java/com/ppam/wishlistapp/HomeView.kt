@@ -23,7 +23,19 @@ fun HomeView() {
     Scaffold(
         topBar = { AppBarView("WishList", {
             Toast.makeText(context, "Back Button Clicked", Toast.LENGTH_SHORT).show()
-        })}
+        })},
+        floatingActionButton = {
+            FloatingActionButton(
+                modifier = Modifier.padding(all = 20.dp),
+                contentColor = Color.White,
+                backgroundColor = Color.Black,
+                onClick = { // TODO Add Navigation to Add WishList to the Screen }) {
+
+                }) {
+                Icon(imageVector = Icons.Default.Add, contentDescription = null)
+            }
+        }
+
     ) {
         LazyColumn(modifier = Modifier
             .fillMaxSize()
