@@ -4,11 +4,15 @@ WishListApp is a Kotlin-based Android application that allows users to create an
 
 ## Screenshots
 
-![Wish List App first Look](https://github.com/pavan-kumar-arepu/MyWishListApp/assets/13812858/6e95d38f-cb9d-4fc2-af42-dbcdf8a951d5)
-*Its all about wish list, we can see our wish here*
+<div style="display: flex; justify-content: space-between;">
 
-![Screenshot 2](https://github.com/pavan-kumar-arepu/MyWishListApp/assets/13812858/e17080d1-bd24-49ba-8b59-8c3d97587fcc)
-**Here we can add our wish here**
+  <img src="https://github.com/pavan-kumar-arepu/MyWishListApp/assets/13812858/6e95d38f-cb9d-4fc2-af42-dbcdf8a951d5" alt="Wish List App first Look" width="300"/>
+  <!-- It's all about a wish list, we can see our wish here -->
+
+  <img src="https://github.com/pavan-kumar-arepu/MyWishListApp/assets/13812858/e17080d1-bd24-49ba-8b59-8c3d97587fcc" alt="Here we can add our wish here" width="300"/>
+  <!-- Here we can add our wishes -->
+
+</div>
 
 ## Features
 
