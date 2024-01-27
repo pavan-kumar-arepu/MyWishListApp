@@ -33,6 +33,6 @@ WishListApp is a Kotlin-based Android application that allows users to create an
 
 ## How to Build and Run
 
-1. Clone the repository: `git clone [repository-url]`
+1. Clone the repository: `git clone https://github.com/pavan-kumar-arepu/MyWishListApp/tree/Master`
 2. Open the project in Android Studio.
 3. Build and run the application on an Android emulator or device.
