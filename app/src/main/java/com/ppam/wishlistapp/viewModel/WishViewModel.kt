@@ -1,4 +1,4 @@
-package com.ppam.wishlistapp
+package com.ppam.wishlistapp.viewModel
 
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf

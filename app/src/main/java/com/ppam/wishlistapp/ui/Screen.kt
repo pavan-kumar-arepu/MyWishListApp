@@ -1,4 +1,4 @@
-package com.ppam.wishlistapp
+package com.ppam.wishlistapp.ui
 
 sealed class Screen(val route: String) {
     object HomeScreen: Screen("home_screen")
