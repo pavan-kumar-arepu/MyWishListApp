@@ -10,7 +10,6 @@ import com.ppam.wishlistapp.data.WishRepository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.launch
-import kotlinx.coroutines.plus
 
 class WishViewModel(
     private val wishRepository: WishRepository

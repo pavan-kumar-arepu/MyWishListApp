@@ -8,6 +8,9 @@ import androidx.room.Query
 import androidx.room.Update
 import kotlinx.coroutines.flow.Flow
 
+// Data Access Object
+// Added CURD Operations
+
 
 @Dao
 abstract  class WishDao {
