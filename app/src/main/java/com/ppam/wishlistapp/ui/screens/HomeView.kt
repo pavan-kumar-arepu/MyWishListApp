@@ -61,9 +61,7 @@ fun HomeView(
                 contentColor = Color.White,
                 backgroundColor = Color.Black,
                 onClick = {
-                    Toast.makeText(context, "FAButton Clicked", Toast.LENGTH_LONG).show()
                     navController.navigate(Screen.AddScreen.route + "/0L")
-
                 }) {
                 Icon(imageVector = Icons.Default.Add, contentDescription = null)
             }
@@ -102,10 +100,9 @@ fun HomeView(
                                 contentDescription = "Delete Icon",
                                 tint = Color.White)
                         }
-
                     },
                     directions = setOf(DismissDirection.EndToStart),
-                    dismissThresholds = {FractionalThreshold(1f)},
+                    dismissThresholds = {FractionalThreshold(0.45F)},
                     dismissContent = {
                         WishItem(wish = wish) {
                             val id = wish.id

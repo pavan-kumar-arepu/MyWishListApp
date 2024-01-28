@@ -11,14 +11,13 @@ import kotlinx.coroutines.flow.Flow
 // Data Access Object
 // Added CURD Operations
 
-
 @Dao
-abstract  class WishDao {
+abstract class WishDao {
 
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     abstract suspend fun addAWish(wishEntity: Wish)
 
-    // Loads all wishes from wish table
+    // Loads all wishes from the wish table
     @Query("Select * from `wish-table`")
     abstract fun getAllWishes(): Flow<List<Wish>>
 
@@ -26,8 +25,10 @@ abstract  class WishDao {
     abstract suspend fun updateAWish(wishEntity: Wish)
 
     @Delete
-    abstract suspend fun deleteAWish(wish: Wish)
+    abstract suspend fun deleteAWish(wishEntity: Wish)
 
-    @Query("Select * from `wish-table` where id=:id" )
-    abstract fun getAWishById(id: Long): Flow<Wish>
+    @Query("Select * from `wish-table` where id=:id")
+    abstract fun getAWishById(id:Long): Flow<Wish>
+
+
 }

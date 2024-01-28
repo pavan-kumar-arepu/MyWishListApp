@@ -25,7 +25,6 @@ fun WishTextField(
         colors = TextFieldDefaults.outlinedTextFieldColors(
             // using predefined Color
             textColor = Color.Black,
-
             focusedBorderColor = colorResource(id = R.color.black),
             unfocusedBorderColor = colorResource(id = R.color.black),
             cursorColor = colorResource(id = R.color.black),
