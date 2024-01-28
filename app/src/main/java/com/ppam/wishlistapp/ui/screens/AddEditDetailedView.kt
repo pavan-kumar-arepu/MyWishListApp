@@ -69,8 +69,7 @@ fun AddEditDetailView(
         ){
             Spacer(modifier = Modifier.height(10.dp))
 
-            WishTextField(
-                label = "Title",
+            WishTextField(label = "Title",
                 value = viewModel.wishTitleState,
                 onValueChanged = {
                     viewModel.onWishTitleChanged(it)
@@ -107,12 +106,14 @@ fun AddEditDetailView(
                                 title = viewModel.wishTitleState.trim(),
                                 description = viewModel.wishDescriptionState.trim())
                         )
-                       // snackMessage.value = "Wish has been created"
+                        snackMessage.value = "Wish has been created"
                     }
                 }else{
+                    //
                     snackMessage.value = "Enter fields to create a wish"
                 }
                 scope.launch {
+                    //scaffoldState.snackbarHostState.showSnackbar(snackMessage.value)
                     navController.navigateUp()
                 }
 

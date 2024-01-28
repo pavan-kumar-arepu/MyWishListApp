@@ -3,6 +3,7 @@ package com.ppam.wishlistapp.data
 import kotlinx.coroutines.flow.Flow
 
 class WishRepository(private val wishDao: WishDao) {
+
     suspend fun addAWish(wish:Wish){
         wishDao.addAWish(wish)
     }
@@ -20,4 +21,5 @@ class WishRepository(private val wishDao: WishDao) {
     suspend fun deleteAWish(wish: Wish){
         wishDao.deleteAWish(wish)
     }
+
 }

@@ -102,7 +102,7 @@ fun HomeView(
                         }
                     },
                     directions = setOf(DismissDirection.EndToStart),
-                    dismissThresholds = {FractionalThreshold(0.45F)},
+                    dismissThresholds = {FractionalThreshold(1f)},
                     dismissContent = {
                         WishItem(wish = wish) {
                             val id = wish.id
@@ -115,5 +115,4 @@ fun HomeView(
     }
 
 }
-
 

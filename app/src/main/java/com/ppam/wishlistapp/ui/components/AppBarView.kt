@@ -15,35 +15,36 @@ import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.unit.dp
 import com.ppam.wishlistapp.R
 
-@Composable
-fun AppBarView(
-    title: String,
-    onBackNavClicked: () -> Unit = {}
-) {
-    val navigationIcon: (@Composable () -> Unit)? =
-        if(!title.contains("WishList")) {
-            {
-                IconButton(onClick = { onBackNavClicked() }) {
-                    Icon(
-                        imageVector = Icons.AutoMirrored.Filled.ArrowBack,
-                        tint = Color.White,
-                        contentDescription = null
-                    )
-                }
-            }
-        } else {
-            null
-        }
-   TopAppBar(
-       title = {
-           Text(text = title,
-               color = colorResource(id = R.color.white),
-               modifier = Modifier
-                   .padding(start = 4.dp)
-                   .heightIn(max = 24.dp))
-       },
-        elevation = 3.dp,
-        backgroundColor = colorResource(id = R.color.teal_700),
-        navigationIcon = navigationIcon
-       )
-}
+ @Composable
+ fun AppBarView(
+     title: String,
+     onBackNavClicked: () -> Unit= {}
+ ){
+     val navigationIcon : (@Composable () -> Unit)? =
+         if(!title.contains("WishList")){
+             {
+                 androidx.compose.material.IconButton(onClick = { onBackNavClicked() }) {
+                     Icon(
+                         imageVector = Icons.AutoMirrored.Filled.ArrowBack,
+                         tint = Color.White,
+                         contentDescription = null
+                     )
+                 }
+             }
+         }else{
+             null
+         }
+
+     TopAppBar(
+         title = {
+             Text(text = title,
+                 color = colorResource(id = R.color.white),
+                 modifier = Modifier
+                     .padding(start = 4.dp)
+                     .heightIn(max = 24.dp))
+         },
+         elevation = 3.dp,
+         backgroundColor = colorResource(id = R.color.teal_700),
+         navigationIcon = navigationIcon
+        )
+ }

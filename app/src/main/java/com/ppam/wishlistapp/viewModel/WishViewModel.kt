@@ -10,6 +10,9 @@ import com.ppam.wishlistapp.data.Wish
 import com.ppam.wishlistapp.data.WishRepository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.launch
 
 
@@ -21,11 +24,11 @@ class WishViewModel(
     var wishDescriptionState by mutableStateOf("")
 
 
-    fun onWishTitleChanged(newString: String) {
+    fun onWishTitleChanged(newString:String){
         wishTitleState = newString
     }
 
-    fun onWishDescriptionChanged(newString: String) {
+    fun onWishDescriptionChanged(newString: String){
         wishDescriptionState = newString
     }
 
@@ -37,25 +40,25 @@ class WishViewModel(
         }
     }
 
-    fun addWish(wish: Wish) {
+    fun addWish(wish: Wish){
         viewModelScope.launch(Dispatchers.IO) {
-            wishRepository.addAWish(wish = wish)
+            wishRepository.addAWish(wish= wish)
         }
     }
 
-    fun getAWishById(id: Long): Flow<Wish> {
+    fun getAWishById(id:Long):Flow<Wish> {
         return wishRepository.getAWishById(id)
     }
 
-    fun updateWish(wish: Wish) {
+    fun updateWish(wish: Wish){
         viewModelScope.launch(Dispatchers.IO) {
-            wishRepository.updateAWish(wish = wish)
+            wishRepository.updateAWish(wish= wish)
         }
     }
 
-    fun deleteWish(wish: Wish) {
+    fun deleteWish(wish: Wish){
         viewModelScope.launch(Dispatchers.IO) {
-            wishRepository.deleteAWish(wish = wish)
+            wishRepository.deleteAWish(wish= wish)
             getAllWishes = wishRepository.getWishes()
         }
     }
