@@ -60,7 +60,7 @@ The app's data is managed through the WishRepository, which interacts with the W
 
 ## How to Build and Run
 
-1. Clone the repository: `git clone https://github.com/pavan-kumar-arepu/MyWishListApp/tree/Master`
+1. Clone the repository: `git clone https://github.com/pavan-kumar-arepu/MyWishListApp.git`
 
 2. Open the project in Android Studio.
 
