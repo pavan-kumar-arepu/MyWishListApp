@@ -4,8 +4,10 @@ import androidx.compose.runtime.Composable
 import androidx.navigation.compose.rememberNavController
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavHostController
+import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
+import androidx.navigation.navArgument
 import com.ppam.wishlistapp.ui.screens.AddEditDetailView
 import com.ppam.wishlistapp.ui.screens.HomeView
 import com.ppam.wishlistapp.viewModel.WishViewModel
@@ -21,8 +23,17 @@ fun Navigation(viewModel: WishViewModel = viewModel(),
         }
 
 //      Registering 2nd screen to navigation
-        composable(Screen.AddScreen.route) {
-            AddEditDetailView(id = 0L,
+        composable(Screen.AddScreen.route + "/{id}",
+            arguments = listOf(
+                navArgument("id") {
+                    type = NavType.LongType
+                    defaultValue = 0L
+                    nullable = false
+                }
+            )
+            ) {entry ->
+            val id = if(entry.arguments != null) entry.arguments!!.getLong("id") else 0L
+            AddEditDetailView(id = id,
                 viewModel = viewModel,
                 navController = navController)
         }

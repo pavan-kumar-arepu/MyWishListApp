@@ -5,13 +5,13 @@ import kotlinx.coroutines.flow.Flow
 class WishRepository(
     private val wishDao: WishDao
 ) {
-    suspend fun addWish(wish: Wish) {
+    suspend fun addAWish(wish: Wish) {
         wishDao.addAWish(wish)
     }
 
     fun getWishes(): Flow<List<Wish>> = wishDao.getAllWishes()
 
-    fun getWishById(id: Long) : Flow<Wish> {
+    fun getAWishById(id: Long) : Flow<Wish> {
         return wishDao.getAWishById(id)
     }
 

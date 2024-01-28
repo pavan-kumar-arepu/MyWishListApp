@@ -14,20 +14,17 @@ import androidx.compose.ui.unit.dp
 import com.ppam.wishlistapp.data.Wish
 
 @Composable
-fun WishItem(
-    wish: Wish,
-    onClick: () -> Unit) {
-    Card(
-        modifier = Modifier
-            .fillMaxWidth()
-            .padding(top = 8.dp, start = 8.dp, end = 8.dp)
-            .clickable {
-                onClick()
-            },
-        elevation = 20.dp,
+fun WishItem(wish: Wish, onClick: () -> Unit){
+    Card(modifier = Modifier
+        .fillMaxWidth()
+        .padding(top = 8.dp, start = 8.dp, end = 8.dp)
+        .clickable {
+            onClick()
+        },
+        elevation = 10.dp,
         backgroundColor = Color.White
     ) {
-        Column(modifier = Modifier.padding(16.dp)) {
+        Column(modifier = Modifier.padding(16.dp)){
             Text(text = wish.title, fontWeight = FontWeight.ExtraBold)
             Text(text = wish.description)
         }
