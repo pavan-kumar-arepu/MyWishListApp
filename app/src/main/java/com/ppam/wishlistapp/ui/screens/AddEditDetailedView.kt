@@ -69,7 +69,8 @@ fun AddEditDetailView(
         ){
             Spacer(modifier = Modifier.height(10.dp))
 
-            WishTextField(label = "Title",
+            WishTextField(
+                label = "Title",
                 value = viewModel.wishTitleState,
                 onValueChanged = {
                     viewModel.onWishTitleChanged(it)
