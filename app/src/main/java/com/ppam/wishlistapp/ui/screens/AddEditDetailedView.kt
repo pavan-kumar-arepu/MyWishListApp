@@ -84,7 +84,11 @@ fun AddEditDetailView(
                 } )
 
             Spacer(modifier = Modifier.height(10.dp))
-            Button(onClick={
+            Button(
+                colors = ButtonDefaults.buttonColors(
+                    backgroundColor = Color.Gray
+                ),
+                onClick={
                 if(viewModel.wishTitleState.isNotEmpty() &&
                     viewModel.wishDescriptionState.isNotEmpty()){
                     if(id != 0L){
