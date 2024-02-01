@@ -2,6 +2,10 @@
 
 WishListApp is a Kotlin-based Android application designed for users to create, manage, and organize their wish lists. The app utilizes modern technologies and follows best practices in mobile app development.
 
+# Author
+Name: AREPU PAVAN KUMAR
+Email: iosdeveloper.ipa@gmail.com
+
 ## Features
 
 - **Add and Edit Wishes:** Users can seamlessly add new wishes, along with titles and descriptions. Existing wishes can also be edited to keep information up-to-date.
